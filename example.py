@@ -10,11 +10,11 @@ pose_glb = np.zeros([1, 3]) # global rotation
 
 
 ########################## mano settings #########################
-n_pose = 12 # number of pose pca coefficients, in mano the maximum is 45
-n_shape = 10 # number of shape pca coefficients
-pose_pca = np.random.normal(size=n_pose)
-shape = np.random.normal(size=n_shape)
-mesh = KinematicModel(config.MANO_MODEL_PATH, MANOArmature, scale=1000)
+#n_pose = 12 # number of pose pca coefficients, in mano the maximum is 45
+#n_shape = 10 # number of shape pca coefficients
+#pose_pca = np.random.normal(size=n_pose)
+#shape = np.random.normal(size=n_shape)
+#mesh = KinematicModel(config.MANO_MODEL_PATH, MANOArmature, scale=1000)
 
 
 ########################## smpl settings ##########################
@@ -22,11 +22,11 @@ mesh = KinematicModel(config.MANO_MODEL_PATH, MANOArmature, scale=1000)
 # therefore in the model we fake an identity matrix as the pca coefficients
 # to make the code compatible
 
-# n_pose = 23 * 3 # degrees of freedom, (n_joints - 1) * 3
-# n_shape = 10
-# pose_pca = np.random.uniform(-0.2, 0.2, size=n_pose)
-# shape = np.random.normal(size=n_shape)
-# mesh = KinematicModel(config.SMPL_MODEL_PATH, SMPLArmature, scale=10)
+n_pose = 23 * 3 # degrees of freedom, (n_joints - 1) * 3
+n_shape = 300
+pose_pca = np.random.uniform(-0.2, 0.2, size=n_pose)
+shape = np.random.normal(size=n_shape)
+mesh = KinematicModel(config.SMPL_MODEL_PATH, SMPLArmature, scale=10)
 
 
 ########################## smpl-h settings ##########################
